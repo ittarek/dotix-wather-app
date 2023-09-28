@@ -34,7 +34,6 @@
 .form-div {
   width: 600px;
   display: flex;
-  gap: 5px;
 }
 .get-btn {
   border-radius: 0px 10px 10px 0px;
@@ -43,10 +42,10 @@
   font-weight: 800;
   border: none;
   position: relative;
-  margin-left: -80px;
+  margin-left: -70px;
 }
 .weather-img {
-  width: 30%;
+  width: 40%;
 }
 .weather-body {
   display: flex;
@@ -128,23 +127,25 @@
 }
 
 /* responsive for mobile device */
-@media screen and (max-width: 570px) {
+@media screen and (max-width: 576px) {
+  .main {
+    width: 100%;
+    height: 100vh;
+  }
   .form-div {
     width: 100%;
   }
 
   .weather-body {
     width: 100%;
-
-
+    gap: 10px;
   }
-
+ 
   #weatherInfo {
     gap: 20px;
     width: 100%;
     height: 100vh;
     justify-content: space-between;
     align-items: center;
-    padding: 5px;
   }
 }
