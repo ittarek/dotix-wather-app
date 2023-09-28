@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>My Weather App</title>
+  </head>
+  <body>
+    <section class="main">
+      <div>
+        <h2 class="app-name">Weather</h2>
+      </div>
+
+      <!-- search -->
+      <div class="form-div">
+        <input
+          id="getZipCode"
+          value="feni"
+          class="input"
+          type="text"
+          placeholder="Please Enter You City"
+        />
+
+        <button onclick="handleGetWeather()" id="getWeatherBtn" class="get-btn">
+          Get Weather
+        </button>
+      </div>
+
+      <!-- weather info -->
+      <div id="weatherInfo">
+        <div class="location-not-found">
+          <h1>Sorry, Location not found!!!</h1>
+          <img src="/assets/404.png" alt="404 Error">
+      </div>
+      <img src="/assets/cloud.png" alt="Weather Image" class="weather-img">
+        <div class="weather-body">
+         
+
+          <div class="weather-box">
+              <p class="temperature">0 <sup class="temp-sub">°C</sup></p>
+              <p class="description">light rain</p>
+          </div>
+
+ 
+              <div class="humidity">
+                  <i class="fa-sharp fa-solid fa-droplet"></i>
+                  <div class="text">
+                      <span id="humidity">45%</span>
+                      <p>Humidity</p>
+                  </div>
+              </div>
+
+              <div class="wind">
+                  <i class="fa-solid fa-wind"></i>
+                  <div class="text">
+                      <span id="wind-speed">12Km/H</span>
+                      <p>Wind Speed</p>
+                  </div>
+              </div>
+         
+      </div>
+      </div>
+    </section>
+
+    <!-- js file -->
+    <script src="script.js"></script>
+  </body>
+</html>
