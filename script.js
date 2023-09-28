@@ -49,7 +49,7 @@ function handleResponse(){
   }
 
 
- else if(this.status == 200){
+ else if(data.cod === 200){
     // data receive here
     location_not_found.style.display = "none";
     weather_body.style.display = "flex";
@@ -87,12 +87,14 @@ function handleResponse(){
    }
 
     
+ }else{
+   console.log("error");
+   
+      
  }
  
 
  
  
- else{
-   weatherInfo.innerHTML = "<p>Weather Unabailable</p>"
-}
+
 } 
