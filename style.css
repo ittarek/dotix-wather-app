@@ -160,12 +160,29 @@
   }
   .form-div {
     width: 100%;
+
   }
   .image-and-location {
     width: 50%;
+   
   }
+  .get-btn{
+    font-size: 12px;
+    margin-left: -20px;
+    padding: 5px;
+  }
+  .weather-img {
+  width: 50%;
+}
   .text {
     margin-right: 10px;
+    font-size: 16px;
+  }
+.temperature{
+    font-size: 16px;
+  }
+  .description{
+    font-size: 16px;
   }
   .weather-body {
     width: 100%;
@@ -174,11 +191,12 @@
     margin-left: 0px;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 20px;
   }
   .weather_info_2nd_div {
     justify-content: space-between;
     gap: 80px;
-    margin-top: 50px;
+    margin-top: 20px;
   }
 
   .weather-box {

@@ -132,10 +132,12 @@ function getWeatherByCoordinates(latitude, longitude) {
 
       location_data.innerHTML = ` ${data?.results[0].components?.suburb}, ${data.results[0].components.county} ,${data?.results[0]?.components?.state},${data?.results[0]?.components.country}`;
 
-      temperature.innerHTML = ` ${Math.round(data?.main?.temp)}°C`;
-
-      humidity.innerHTML = `${data.main?.humidity}%`;
-      wind_speed.innerHTML = `${data.wind?.speed} m/s`;
+      const temp = Math.round(data?.main?.temp);
+      temperature.innerHTML = temp ? temp : "No Data Found";
+      const huminy = data.main?.humidity;
+      humidity.innerHTML = huminy ? huminy : "No Data Found";
+      const w_speed = data.wind?.speed;
+      wind_speed.innerHTML = w_speed ? w_speed : "No Data Found";
 
       const main_location = ` ${data.results[0].components.state}`;
       getWeather(main_location.split(" ")[1]);
