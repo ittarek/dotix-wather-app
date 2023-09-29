@@ -15,61 +15,73 @@
   </head>
   <body>
     <section class="main">
-      <div>
-        <h2 class="app-name">Weather</h2>
-      </div>
-
       <!-- search -->
+
       <div class="form-div">
         <input
-          id="getZipCode"
-          value="feni"
+          id="getCityName"
           class="input"
           type="text"
+          class="getCity"
           placeholder="Please Enter You City"
         />
 
         <button onclick="handleGetWeather()" id="getWeatherBtn" class="get-btn">
           Get Weather
         </button>
+
+        <div class="unit-selector">
+  <label for="unit-select">Select Unit:</label>
+  <select id="unit-select">
+    <option value="metric">Celsius (°C)</option>
+    <option value="imperial">Fahrenheit (°F)</option>
+  </select>
+</div>
       </div>
 
-      <!-- weather info -->
-      <div id="weatherInfo">
-        <!-- not found image and text -->
-        <div class="location-not-found">
-          <h1>Sorry, Location not found!!!</h1>
-          <img src="/assets/404.png" alt="404 Error" />
-        </div>
+      <!-- image div -->
+      <div class="image-and-location">
         <img src="/assets/cloud.png" alt="Weather Image" class="weather-img" />
-        
+        <p class="location"></p>
+      </div>
+
+      <!-- not found image and text -->
+      <div class="location-not-found">
+        <h1>Sorry, Location not found!!!</h1>
+        <img src="/assets/404.png" alt="404 Error" />
+      </div>
+
       <!-- details all weather data -->
-        <div class="weather-body">
-          <div class="weather-box">
-            <p class="temperature">0 <sup class="temp-sub">°C</sup></p>
-            <p class="description">light rain</p>
-          </div>
+      <div id="weatherInfo" >
+      <div class="weather-body">
+        <div class="weather-box">
+          <p class="temperature">0 <sup class="temp-sub">°C</sup></p>
+          <p class="description">light rain</p>
+        </div>
 
-          <div class="humidity">
-            <i class="fa-sharp fa-solid fa-droplet"></i>
-            <div class="text">
-              <span id="humidity">45%</span>
-              <p>Humidity</p>
-            </div>
-          </div>
-
-          <div class="wind">
-            <i class="fa-solid fa-wind"></i>
-            <div class="text">
-              <span id="wind-speed">12Km/H</span>
-              <p>Wind Speed</p>
-            </div>
+       <div class="weather_info_2nd_div">
+        <div class="humidity">
+          <i class="fa-sharp fa-solid fa-droplet"></i>
+          <div class="text">
+            <span id="humidity"></span>
+            <p>Humidity</p>
           </div>
         </div>
+
+        <div class="wind">
+          <i class="fa-solid fa-wind"></i>
+          <div class="text">
+            <span id="wind-speed">Km/H</span>
+            <p>Wind Speed</p>
+          </div>
+       </div>
+        </div>
       </div>
+    </div>
     </section>
 
     <!-- js file -->
-    <script src="script.js"></script>
+    <!-- <script src="script.js"></script> -->
+    <script src="weather.js"></script>
   </body>
 </html>
